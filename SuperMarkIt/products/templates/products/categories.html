@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h1>this is the main Category page</h1>
+  <div class="Categories">
+
+    {% for category in categories %}
+      <div class="category">
+        <img src="{{category.thumbnail.url}}" class="thumbnails">
+        <h5><a href="{{category.get_absolute_url}}">{{category.name}}</a></h5>
+        <li><a href="{% url 'products:main' %}" class="tag-product">temporary all products</a></li>
+
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

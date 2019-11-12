@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h1>this is the main products page</h1>
+  <div class="Products">
+
+    {% for product in products %}
+      <div class="product">
+        <img src="{{product.thumbnail.url}}" class="thumbnails">
+        <h5><a href="#">{{product.name}}</a></h5>
+          <span class="Tesco">Tesco:</span>
+            <span class="product-price"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               £{{product.price_tesco}}</span><br>
+          <span class="Sainsburys">Sainsburys:</span>
+            <span class="product-price"> &nbsp; £{{product.price_sainsburys}}</span><br>
+          <span class="Morrisons">Morrisons:</span>
+            <span class="product-price"> &nbsp;&nbsp;&nbsp;
+               £{{product.price_morrisons}}</span><br>
+        <button type="button" class="btn-add-to-basket">Add to Basket</button>
+        <li><a href="{% url 'basket:update' product.slug %}" class="tag-basket">Basket</a></li>
+        <form class="attibute-qty" action="{% url 'basket:update' product.slug %}" method="GET">
+          <input type="number" name="quantity" placeholder="0" min="0" oninput="this.value = Math.abs(this.value)">
+          <input type="submit" value="Add to Basket">
+        </form>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

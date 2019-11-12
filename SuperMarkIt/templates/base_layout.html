@@ -1,0 +1,36 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'categories.css '%}">
+  </head>
+  <header>
+    <div class="logo-image">
+      <h1><a href="{% url 'home' %}"><img src="{% static 'Site-Logo-small.png'%}" alt="SuperMarkIt"/></a></h1>
+    </div>
+    <nav>
+      <ul>
+        {% if user.is_authenticated %}
+          <li>
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" name="btn-logout">Logout</button>
+            </form>
+          </li>
+        {% else %}
+          <li><a href="{% url 'accounts:login' %}" class="tag-login">Login</a></li>
+          <li><a href="{% url 'accounts:register' %}" class="tag-register">Register</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+  </body>
+</html>

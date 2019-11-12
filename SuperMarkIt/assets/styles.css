@@ -1,0 +1,140 @@
+body{
+  margin-left: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+body *{
+  font-family: sans-serif;
+}
+
+h5{
+  text-align: center;
+}
+
+.logo-image{
+  margin-right: 20px;
+}
+
+header{
+  width: 100vw;
+  height: 100px;
+  background-color: #C0C5CF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid #064FAF;
+}
+
+
+nav{
+  justify-self: end;
+}
+
+nav li{
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.tag-login{
+  margin-right: 10px;
+  font-size: 1.2em;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  font-style: normal;
+  background-color: #F5F7FB;
+  font-family: Verdana;
+  text-decoration: none;
+}
+
+li button{
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  font-family: Verdana;
+}
+
+li button:hover{
+  background-color: #555555;
+  color: white;
+}
+
+.tag-register{
+  margin-right: 20px;
+  font-size: 1.2em;
+  border: 3px solid #02366D;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: #A9C0E3;
+  font-family: Verdana;
+}
+
+
+.thumbnails{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.product {
+  background: #bcbcbc;
+  padding: 10px;
+  border: 2px solid #92364e;
+}
+
+
+.product .Tesco{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00539F;
+}
+
+.product .Sainsburys{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #FC8019;
+}
+
+.product .Morrisons{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00563F;
+}
+
+.product-price{
+  font-family: Arial;
+  font-size: 0.9em;
+  color: black;
+}
+
+.product .btn-add-to-basket{
+  padding: 10px 24px;
+  float: right;
+  background-color: #03bd85;
+  border-radius: 6px;
+  border: #25277a;
+}
+
+.product .btn-add-to-basket:hover{
+  font-weight: bold;
+  background-color: #52e0c0;
+  border-radius: 6px;
+  border: #25277a;
+}
+
+
+#https://www.w3schools.com/css/css3_buttons.asp

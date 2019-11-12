@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+<title>Register</title>
+<link rel="stylesheet" href="{% static 'accounts/register-page.css' %}">
+<section class="hero3">
+  <div class="site-description-register">
+    <h2>Register with SuperMarkIt</h2>
+    <br>
+    <form class="site-form-register" action="{% url 'accounts:register' %}" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+      <div class="fieldWrapper-register">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+      <button class="btn-register-auth" type="submit"><span>Register</span></button>
+    </form>
+    <p class="footer">Created by Ramon Williams</p>
+  </div>
+</section>
+{% endblock %}

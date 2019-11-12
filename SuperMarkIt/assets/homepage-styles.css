@@ -1,0 +1,101 @@
+body{
+  margin-left: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+header{
+  width: 100vw;
+  height: 100px;
+  background-color: #C0C5CF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid #064FAF;
+}
+
+nav{
+  justify-self: end;
+}
+
+nav li{
+  margin-top: 30px;
+  display: inline-block;
+}
+
+
+.tag-login{
+  margin-right: 10px;
+  font-size: 1.2em;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  font-style: normal;
+  background-color: #F5F7FB;
+  font-family: Verdana;
+  text-decoration: none;
+}
+
+li button{
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  font-family: Verdana;
+}
+
+li button:hover{
+  background-color: #555555;
+  color: white;
+}
+
+.tag-register{
+  margin-right: 20px;
+  font-size: 1.2em;
+  border: 3px solid #02366D;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: #A9C0E3;
+  font-family: Verdana;
+}
+
+.site-description h2{
+  color: lightgreen;
+  font-family: arial;
+  font-size: 4em;
+  text-shadow: 2px 2px black;
+}
+
+.site-description p{
+  color: white;
+  font-family: arial;
+  font-size: 1.5em;
+  text-shadow: 2px 2px black;
+
+}
+
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Text styles */
+  text-align: center;
+
+  /* Background styles */
+  background-image: url(hero-image1.jpg);
+  background-size: cover;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
