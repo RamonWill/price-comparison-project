@@ -1,39 +1,21 @@
+{% extends 'base_layout.html' %}
 {% load static from staticfiles %}
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% block content %}
   <head>
     <meta charset="utf-8">
     <title>Homepage</title>
     <link rel="stylesheet" href="{% static 'homepage-styles.css' %}">
   </head>
-  <header>
-    <div class="logo-image">
-      <h1><a href="{% url 'home' %}"><img src="{% static 'Site-Logo-small.png'%}" alt="SuperMarkIt"/></a></h1>
-    </div>
-    <nav>
-      <ul>
-        {% if user.is_authenticated %}
-          <li>
-            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-              {% csrf_token %}
-              <button type="submit" name="btn-logout">Logout</button>
-            </form>
-          </li>
-        {% else %}
-          <li><a href="{% url 'accounts:login' %}" class="tag-login">Login</a></li>
-          <li><a href="{% url 'accounts:register' %}" class="tag-register">Register</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-  </header>
   <body>
     <section class="hero">
       <div class="site-description">
         <h2>Grocery shopping with a difference!</h2>
+        <p>A webscraper that compares the prices of your shopping basket across the UK's largest supermarkets.</p>
         <br>
-        <p>A webscraper that compares the prices of your shopping basket across the top UK Supermarkets.</p>
+        <a href="{% url 'about' %}" class="tag-about">Find Out More!</a>
       </div>
     </section>
   </body>
-</html>
+{% endblock %}

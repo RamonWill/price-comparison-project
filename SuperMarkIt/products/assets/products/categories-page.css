@@ -1,0 +1,16 @@
+
+.Categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.category {
+  background: #bcbcbc;
+  padding: 10px;
+  border: 2px solid #92364e;
+}
+
+
+
+#https://www.w3schools.com/css/css3_buttons.asp

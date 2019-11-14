@@ -1,0 +1,104 @@
+body{
+  margin-left: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+body *{
+  font-family: sans-serif;
+}
+
+h5{
+  text-align: center;
+}
+
+header{
+  width: 100vw;
+  height: 85px;
+  background-color: #EAECF0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 4px solid lightblue;
+  white-space: nowrap;
+}
+
+
+nav{
+  justify-self: end;
+}
+
+nav li{
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.tag-products-base{
+  margin-right: 10px;
+  font-size: 1.2em;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  font-style: normal;
+  background-color: #F5F7FB;
+  font-family: Verdana;
+  text-decoration: none;
+}
+
+
+.tag-login-base{
+  margin-right: 10px;
+  font-size: 1.2em;
+  border: 3px solid #02366D;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: #A9C0E3;
+  font-family: Verdana
+}
+
+.tag-register-base{
+  margin-right: 25px;
+  font-size: 1.2em;
+  border: 3px solid #02366D;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: #A9C0E3;
+  font-family: Verdana
+}
+
+li button{
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  font-family: Verdana;
+}
+
+li button:hover{
+  background-color: #555555;
+  color: white;
+}
+
+
+.tag-basket-base{
+  margin-right: 25px;
+  font-size: 1.2em;
+  border: 3px solid #02366D;
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: lightgreen;
+  font-family: Verdana
+}
+
+
+#https://www.w3schools.com/css/css3_buttons.asp

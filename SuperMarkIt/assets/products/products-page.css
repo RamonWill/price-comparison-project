@@ -1,0 +1,58 @@
+.thumbnails{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.product {
+  background: #bcbcbc;
+  padding: 10px;
+  border: 2px solid #92364e;
+}
+
+
+.product .Tesco{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00539F;
+}
+
+.product .Sainsburys{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #FC8019;
+}
+
+.product .Morrisons{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00563F;
+}
+
+.product-price{
+  font-family: Arial;
+  font-size: 0.9em;
+  color: black;
+}
+
+.product .btn-add-to-basket{
+  padding: 10px 24px;
+  float: right;
+  background-color: #03bd85;
+  border-radius: 6px;
+  border: #25277a;
+}
+
+.product .btn-add-to-basket:hover{
+  font-weight: bold;
+  background-color: #52e0c0;
+  border-radius: 6px;
+  border: #25277a;
+}

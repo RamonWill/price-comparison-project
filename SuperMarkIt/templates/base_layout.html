@@ -4,16 +4,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="{% static 'categories.css '%}">
+    <link rel="stylesheet" href="{% static 'banner-styles.css' %}">
   </head>
   <header>
     <div class="logo-image">
-      <h1><a href="{% url 'home' %}"><img src="{% static 'Site-Logo-small.png'%}" alt="SuperMarkIt"/></a></h1>
+      <h1><a href="{% url 'home' %}"><img src="{% static 'Logo-main1.png'%}" alt="SuperMarkIt"/></a></h1>
     </div>
     <nav>
       <ul>
         {% if user.is_authenticated %}
+          <li><a href="{% url 'products:categories' %}" class="tag-products-base">Categories</a></li>
+          <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
+          <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
           <li>
             <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
@@ -21,8 +23,11 @@
             </form>
           </li>
         {% else %}
-          <li><a href="{% url 'accounts:login' %}" class="tag-login">Login</a></li>
-          <li><a href="{% url 'accounts:register' %}" class="tag-register">Register</a></li>
+          <li><a href="{% url 'products:categories' %}" class="tag-products-base">Categories</a></li>
+          <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
+          <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
+          <li><a href="{% url 'accounts:login' %}" class="tag-login-base">Login</a></li>
+          <li><a href="{% url 'accounts:register' %}" class="tag-register-base">Register</a></li>
         {% endif %}
       </ul>
     </nav>

@@ -1,6 +1,11 @@
 {% extends 'base_layout.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'products/categories-page.css '%}">
+  </head>
   <h1>this is the main Category page</h1>
   <div class="Categories">
 

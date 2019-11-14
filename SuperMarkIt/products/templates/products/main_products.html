@@ -1,6 +1,13 @@
 {% extends 'base_layout.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
+<head>
+  <meta charset="utf-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="{% static 'products/products-page.css' %}">
+</head>
+
   <h1>this is the main products page</h1>
   <div class="Products">
 
