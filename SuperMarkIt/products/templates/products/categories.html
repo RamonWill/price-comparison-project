@@ -6,14 +6,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'products/categories-page.css '%}">
   </head>
-  <h1>this is the main Category page</h1>
+  <h1>this is the main category page</h1>
   <div class="Categories">
 
     {% for category in categories %}
       <div class="category">
-        <img src="{{category.thumbnail.url}}" class="thumbnails">
-        <h5><a href="{{category.get_absolute_url}}">{{category.name}}</a></h5>
-        <li><a href="{% url 'products:main' %}" class="tag-product">temporary all products</a></li>
+        <a href="{{category.get_absolute_url}}"><img src="{{category.thumbnail.url}}" class="thumbnails"></a>
+        <h5><a href="{{category.get_absolute_url}}" class="category-name">{{category.name}}</a></h5>
 
       </div>
     {% endfor %}

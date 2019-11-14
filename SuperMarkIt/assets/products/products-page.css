@@ -2,6 +2,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 6px;
 }
 
 
@@ -12,9 +13,15 @@
 }
 
 .product {
-  background: #bcbcbc;
+  background: #d5e4f2;
   padding: 10px;
-  border: 2px solid #92364e;
+  border: 2px solid #a8b1ba;
+  border-radius: 3px;
+}
+
+.product h5{
+  text-align: center;
+  color: #090b17;
 }
 
 
@@ -42,17 +49,44 @@
   color: black;
 }
 
-.product .btn-add-to-basket{
-  padding: 10px 24px;
-  float: right;
-  background-color: #03bd85;
-  border-radius: 6px;
-  border: #25277a;
+.attibute-qty{
+  display: inline-block;
 }
 
-.product .btn-add-to-basket:hover{
+input[name=quantity]{
+  border: 1px solid grey;
+  border-radius: 5px;
+  size: 2;
+  max-width: 40px;
+  font-size: 16px;
   font-weight: bold;
-  background-color: #52e0c0;
-  border-radius: 6px;
+}
+input[name=quantity]:focus{
+  border: 2px solid black;
+}
+
+.units-qty{
+  margin-left: 14px;
+  font-size: 17px;
+}
+
+
+.btn-add-to-basket{
+  margin-left: 30px;
+  padding: 8px;
+  color: white;
+  float: right;
+  background-color: #4bada5;
+  border-radius: 3px;
   border: #25277a;
+  transition-duration: 0.3s;
+}
+
+.btn-add-to-basket:hover{
+  padding-right: 12px;
+  padding-bottom: 10px;
+  background-color: #0252a3;
+  transform: skewX(-10deg);
+  border-radius: 6px;
+  transition-duration: 0.5s;
 }

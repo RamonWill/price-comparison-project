@@ -1,4 +1,3 @@
-
 .Categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -6,9 +5,26 @@
 }
 
 .category {
-  background: #bcbcbc;
+  background: #d5e4f2;
   padding: 10px;
-  border: 2px solid #92364e;
+  border: 2px solid #a8b1ba;
+  border-radius: 3px;
+}
+
+.thumbnails{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+}
+
+.Categories a{
+  text-decoration: none;
+}
+
+.Categories h5{
+  text-align: center;
+  color: #090b17;
 }
 
 
