@@ -29,9 +29,9 @@ class Product(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=50, db_index=True)
 
-    url_morrisons = models.CharField(max_length=100, db_index=True)
-    url_sainsburys = models.CharField(max_length=100, db_index=True)
-    url_tesco = models.CharField(max_length=100, db_index=True)
+    url_morrisons = models.CharField(max_length=250, db_index=True)
+    url_sainsburys = models.CharField(max_length=250, db_index=True)
+    url_tesco = models.CharField(max_length=250, db_index=True)
 
     price_morrisons = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     price_sainsburys = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)

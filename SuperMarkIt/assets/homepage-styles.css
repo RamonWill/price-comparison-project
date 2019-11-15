@@ -61,6 +61,13 @@
   background-attachment: fixed;
 }
 
+.created-by p{
+  text-align: right;
+  margin: 0;
+  color: black;
+  font-size: 7px;
+}
+
 *body{
   margin-left: 0;
   margin-top: 0;
