@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/26018372/where-to-keep-static-files-in-django-application-how-to-server-static-files-fro

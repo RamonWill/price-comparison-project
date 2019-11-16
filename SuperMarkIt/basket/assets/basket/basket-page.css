@@ -1,6 +1,72 @@
-h1{
-  background-color: red;
-  background: red;
+.heading-basket{
+  color: Black;
   font-family: monospace;
-  font-style: italic;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+/*.tesco-hdr{
+  color: #00539F
+}
+
+.sainsburys-hdr{
+  color: #FC8019
+}
+
+.morrisons-hdr{
+  color: #00563F;
+}*/
+
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 3px;
+  font-size: 1.1em;
+}
+
+tr:nth-child(even) {
+  background-color: #cadbfc;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+tfoot{
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.remove-from-basket{
+  padding: 2px;
+  font-weight: bolder;
+  color: #5e1501;
+  font-family: arial;
+  font-style: oblique;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.remove-from-basket:hover{
+  padding: 3px;
+  border-radius: 8px;
+  color: white;
+  background-color: red;
+  transition-duration: 0.3s;
+}
+
+.remove-from-basket:hover:after{
+  content: '\2718';
+  margin-left: 5px;
 }

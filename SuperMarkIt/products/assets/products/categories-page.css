@@ -5,10 +5,10 @@
 }
 
 .category {
-  background: #d5e4f2;
+  background: #B5D9D9;
   padding: 10px;
-  border: 2px solid #a8b1ba;
-  border-radius: 3px;
+  border: 2px solid #656566;
+  border-radius: 4px;
 }
 
 .thumbnails{
@@ -16,15 +16,35 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 6px;
+  transition-duration: 0.5s;
 }
 
-.Categories a{
-  text-decoration: none;
+.category:hover .thumbnails{
+  border-radius: 100px;
+  transition-duration: 0.5s;
 }
+
+.category:hover .category-name{
+  background: #1E96A6;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  font-size: 24px;
+  transition-duration: 0.3s;
+}
+
+
+.category-name{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition-duration: 0.3s;
+}
+
 
 .Categories h5{
   text-align: center;
-  color: #090b17;
 }
 
 

@@ -54,10 +54,6 @@ def update_basket(request, slug):
     # the below returns ("Basket item object", "true/false")
     basket_item, created = BasketItem.objects.get_or_create(basket=basket, product=product)
 
-    if created:
-        print("yeah")
-    else:
-        pass
 
     if quantity and update_quantity:
         if int(quantity) <= 0:
@@ -73,13 +69,28 @@ def update_basket(request, slug):
     # else:
     #     basket.items.remove(basket_item)
 
-    new_total = 0.00
+
+    start_total_tesco = 0.00
+    start_total_sainsburys = 0.00
+    start_total_morrisons = 0.00
+
     for item in basket.basketitem_set.all():
-        total_product = float(item.product.price_sainsburys) * item.quantity
-        new_total += total_product
+        product_total_tesco = float(item.product.price_tesco) * item.quantity
+        product_total_sainsburys = float(item.product.price_sainsburys) * item.quantity
+        product_total_morrisons = float(item.product.price_morrisons) * item.quantity
+        start_total_tesco += product_total_tesco
+        start_total_sainsburys += product_total_sainsburys
+        start_total_morrisons += product_total_morrisons
+
+
 
     request.session["items_total"] = basket.basketitem_set.count()
     print(basket.basketitem_set.count())
-    basket.total = new_total
+
+    basket.total_tesco = start_total_tesco
+    basket.total_sainsburys = start_total_sainsburys
+    basket.total_morrisons = start_total_morrisons
+
     basket.save()
-    return HttpResponseRedirect(reverse("basket:basket"))
+    return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
+    #return HttpResponseRedirect(reverse("basket:basket"))

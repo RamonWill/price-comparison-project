@@ -20,10 +20,9 @@
 
 .site-description-register {
   max-width: 500px;
-	background: #f4f7f8;
+	background: #d0eaf2;
 	margin: 10px auto;
 	padding: 40px;
-	background: #f4f7f8;
 	border-radius: 8px;
   border: 4px solid black;
 }
@@ -32,7 +31,8 @@
   text-align: center;
   border: 2px solid black;
   border-radius: 8px;
-  background: green;
+  color: white;
+  background: #2A7FFD;
   padding: 8px;
   margin: -4px -4px 4px -4px;
 }
@@ -46,14 +46,14 @@
 }
 
 .btn-register-auth{
-  background-color: #4CAF50; /* Green */
+  background-color: #2A7FFD; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.2em;
   border-radius: 6px
 }
 
@@ -82,4 +82,8 @@
 .btn-register-auth:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.field-tags {
+  font-weight: bold;
 }

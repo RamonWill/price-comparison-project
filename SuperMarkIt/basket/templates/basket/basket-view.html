@@ -3,20 +3,20 @@
 
 
 {% block content %}
-{% if empty %}
-
-<h2>{{ empty_message }}</h2>
-
-{% else %}
 <head>
   <meta charset="utf-8">
   <title>Basket</title>
   <link rel="stylesheet" href="{% static 'basket/basket-page.css' %}">
 </head>
+{% if empty %}
+
+<h2>{{ empty_message }}</h2>
+
+{% else %}
+
 <div class="heading-basket">
   <h1>Your Basket</h1>
 </div>
-
 
 <div class="col-sm-8 col-sm-offset-2">
 
@@ -24,28 +24,39 @@
 <table class="table">
   <tr>
     <th>Product</th>
-    <th>Sainsburys Price</th>
+    <th>Product Name</th>
+    <th><span class="tesco-hdr"><img src="{% static 'basket/tesco-logo.png'%}" alt="Tesco Logo"></span></th>
+    <th><span class="sainsburys-hdr"><img src="{% static 'basket/sainsburys-logo.png'%}" alt="Sainsburys Logo"></span></th>
+    <th><span class="morrisons-hdr"><img src="{% static 'basket/morrisons-logo.png'%}" alt="morrisons Logo"></span></th>
     <th>Quantity</th>
     <th></th>
   </tr>
   {% for item in basket.basketitem_set.all %}
 
   <tr>
+    <td width="102"><img src="{{item.product.thumbnail.url}}" class="basket-thumbnails" width="100" height="100" ></td>
     <td>{{item.product.name}}</td>
-    <td>{{item.product.price_sainsburys}}</td>
+    <td>£{{item.product.price_tesco}}</td>
+    <td>£{{item.product.price_sainsburys}}</td>
+    <td>£{{item.product.price_morrisons}}</td>
     <td>{{item.quantity}}</td>
-    <td><a href="{% url 'basket:update' item.product.slug %}?quantity=0">Remove</a></td>
+    <td><a href="{% url 'basket:update' item.product.slug %}?quantity=0" class="remove-from-basket">Remove</a></td>
   </tr>
   {% endfor %}
   <tfoot>
+    <td>Totals</td>
     <td></td>
+    <td>£{{basket.total_tesco}}</td>
+    <td>£{{basket.total_sainsburys}}</td>
+    <td>£{{basket.total_morrisons}}</td>
     <td></td>
-    <td></td>
-    <td>Total: {{basket.total}}</td>
+    <td>
+
+    </td>
   </tfoot>
 </table>
 
 </div>
 {% endif %}
-<li><a href="{% url 'products:main' %}" class="back-to-products">Back to Products</a></li>
+
 {% endblock %}

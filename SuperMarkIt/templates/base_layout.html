@@ -13,7 +13,7 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li><a href="{% url 'products:categories' %}" class="tag-products-base">Categories</a></li>
+          <li><a href="{% url 'products:categories' %}" class="tag-categories-base">Categories</a></li>
           <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
           <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
           <li>
@@ -23,7 +23,7 @@
             </form>
           </li>
         {% else %}
-          <li><a href="{% url 'products:categories' %}" class="tag-products-base">Categories</a></li>
+          <li><a href="{% url 'products:categories' %}" class="tag-categories-base">Categories</a></li>
           <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
           <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
           <li><a href="{% url 'accounts:login' %}" class="tag-login-base">Login</a></li>

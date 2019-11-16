@@ -14,7 +14,7 @@
       {% for field in form %}
       <div class="fieldWrapper-register">
         {{ field.errors }}
-        {{ field.label_tag }} {{ field }}
+        <span class="field-tags">{{ field.label_tag }}</span> {{ field }}
         {% if field.help_text %}
         <p class="help">{{ field.help_text|safe }}</p>
         {% endif %}

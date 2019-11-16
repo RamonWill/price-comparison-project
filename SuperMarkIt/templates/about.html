@@ -4,10 +4,24 @@
 
   <head>
     <meta charset="utf-8">
-    <title>about page</title>
+    <title>About</title>
   </head>
-  <body>
-    <h1>this is the about page</h1>
-    <p>paragraph for details about the project</p>
+  <body style="background-color: #d0eaf2; color: #1f4070;">
+    <h1>Created by Ramon Williams</h1>
+    <pre><span class="about-content" style="font-size: 18px;">
+      SuperMarkIt is a website that uses webscraping code written in Python
+      to compare the prices of grocery products across the UK's leading
+      supermarkets.
+
+      To use the webscraper the SuperUser creates the product and gives it a
+      Category and Name. In this same section the URL for each supermarket
+      is then entered and stored into the database. Once the load-prices.py file
+      is ran it will go through each URL in the database and scrape the prices
+      from each webpage. Erroneous URLs/prices will be flagged in the terminal
+      to the user.
+
+      As of November 2019 this webscraper currently works for Tesco, Sainsburys
+      and Morrisons.
+    </span></pre>
   </body>
 {% endblock %}

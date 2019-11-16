@@ -5,7 +5,7 @@
 }
 
 .category {
-  background: #7da2c7;
+  background: #B5D9D9;
   padding: 10px;
   border: 2px solid #656566;
   border-radius: 4px;
@@ -25,10 +25,11 @@
 }
 
 .category:hover .category-name{
-  background: lightblue;
+  background: #1E96A6;
   padding: 10px;
   border: 1px solid white;
-  border-radius: 3px;
+  border-radius: 100px;
+  color: white;
   font-size: 24px;
   transition-duration: 0.3s;
 }

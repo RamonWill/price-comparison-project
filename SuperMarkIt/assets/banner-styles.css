@@ -29,72 +29,127 @@ nav li{
   display: inline-block;
 }
 
-.tag-products-base{
+.tag-categories-base{
   margin-right: 10px;
-  font-size: 1.2em;
-  border: 3px solid black;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
   padding: 5px;
-  border-radius: 15px;
   color: black;
-  font-style: normal;
-  background-color: #F5F7FB;
   font-family: Verdana;
   text-decoration: none;
+  transition-duration: 0.3s;
 }
+
+.tag-categories-base:hover{
+  background-color: #F5F7FB;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.tag-products-base{
+  margin-right: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-right: 3px solid black;
+  padding: 5px;
+  color: black;
+  font-family: Verdana;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.tag-products-base:hover{
+  background-color: #F5F7FB;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
 
 
 .tag-login-base{
   margin-right: 10px;
-  font-size: 1.2em;
-  border: 3px solid #02366D;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 2px solid #555555;
   padding: 5px;
   border-radius: 15px;
   color: black;
   text-decoration: none;
-  background-color: #A9C0E3;
-  font-family: Verdana
+  background-color: white;
+  font-family: Verdana;
+  transition-duration: 0.5s;
+}
+
+.tag-login-base:hover{
+  background-color: #555555;
+  color: white;
+  padding: 8px;
+  transition-duration: 0.5s;
 }
 
 .tag-register-base{
   margin-right: 25px;
-  font-size: 1.2em;
-  border: 3px solid #02366D;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 2px solid #555555;
   padding: 5px;
   border-radius: 15px;
   color: black;
   text-decoration: none;
-  background-color: #A9C0E3;
-  font-family: Verdana
+  background-color: white;
+  font-family: Verdana;
+  transition-duration: 0.5s;
+}
+
+.tag-register-base:hover{
+  background-color: #555555;
+  color: white;
+  padding: 8px;
+  transition-duration: 0.5s;
 }
 
 li button{
   margin-right: 30px;
   margin-bottom: 30px;
   padding: 5px;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: bold;
   border-radius: 15px;
   background-color: white;
   color: black;
   border: 2px solid #555555;
   font-family: Verdana;
+  transition-duration: 0.5s;
 }
 
 li button:hover{
   background-color: #555555;
   color: white;
+  padding: 8px;
+  transition-duration: 0.5s;
 }
-
 
 .tag-basket-base{
   margin-right: 25px;
   font-size: 1.2em;
-  border: 3px solid #02366D;
+  font-weight: bold;
+  border-right: 3px solid black;
   padding: 5px;
-  border-radius: 15px;
   color: black;
   text-decoration: none;
+  font-family: Verdana;
+  transition-duration: 0.3s;
+}
+
+.tag-basket-base:hover{
+  border: 3px solid black;
+  border-radius: 10px;
   background-color: lightgreen;
-  font-family: Verdana
+  transition-duration: 0.3s;
 }
 
 

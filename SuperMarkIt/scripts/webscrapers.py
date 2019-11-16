@@ -23,11 +23,17 @@ def sainsburys_scrape(url):
         # product_description = soup.find("div", class_="productTitleDescriptionContainer")
         # product_name = product_description.find("h1").getText()
         price_units = soup.find("p", class_="pricePerUnit").getText().strip()
-        product_price = price_units.partition("/")[0][1:]
-        return product_price
+        product_price = price_units.partition("/")[0]
+        if "p" in product_price:
+            product_price_pence = product_price.replace("p", "")
+            product_price_final = float(product_price_pence)/100
+        else:
+            product_price_final = price_units.partition("/")[0][1:]
+
+        return product_price_final
 
     except AttributeError:
-        print("Failed- investigate: {}")
+        print("Failed- investigate: {}".format(url))
 
 
 def morrisons_scrape(url):
@@ -48,7 +54,7 @@ def morrisons_scrape(url):
 
         return product_price
     except AttributeError:
-        print("Failed- investigate: {}")
+        print("Failed- investigate: {}".format(url))
 
 
 def tesco_scrape(url):
@@ -61,4 +67,4 @@ def tesco_scrape(url):
         return product_price
 
     except AttributeError:
-        print("Failed- investigate: {}")
+        print("Failed- investigate: {}".format(url))

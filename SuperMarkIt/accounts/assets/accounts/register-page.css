@@ -1,0 +1,89 @@
+.hero3 {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Text styles */
+  text-align: left;
+
+  /* Background styles */
+  background-image: url(store-aisle-register.jpg);
+  background-size: cover;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.site-description-register {
+  max-width: 500px;
+	background: #d0eaf2;
+	margin: 10px auto;
+	padding: 40px;
+	border-radius: 8px;
+  border: 4px solid black;
+}
+
+.site-description-register h2{
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: white;
+  background: #2A7FFD;
+  padding: 8px;
+  margin: -4px -4px 4px -4px;
+}
+
+.site-description-register .footer{
+  font-size: 8px;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-register-auth{
+  background-color: #2A7FFD; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 6px
+}
+
+
+.btn-register-auth span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn-register-auth span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn-register-auth:hover span {
+  padding-right: 25px;
+}
+
+.btn-register-auth:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.field-tags {
+  font-weight: bold;
+}
