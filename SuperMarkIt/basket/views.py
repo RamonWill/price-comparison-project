@@ -1,5 +1,4 @@
 from django.shortcuts import render, HttpResponseRedirect
-from django.urls import reverse
 
 # Create your views here.
 from products.models import Product
@@ -20,7 +19,6 @@ def basket_view(request):
         empty_message = "Your basket is currently empty"
         context = {"empty": True, "empty_message": empty_message}
 
-    # basket = Basket.objects.all()[0]
     template = "basket/basket-view.html"
     return render(request, template, context)
 
@@ -64,12 +62,6 @@ def update_basket(request, slug):
     else:
         pass
 
-    # if basket_item not in basket.items.all():
-    #     basket.items.add(basket_item)
-    # else:
-    #     basket.items.remove(basket_item)
-
-
     start_total_tesco = 0.00
     start_total_sainsburys = 0.00
     start_total_morrisons = 0.00
@@ -85,7 +77,7 @@ def update_basket(request, slug):
 
 
     request.session["items_total"] = basket.basketitem_set.count()
-    print(basket.basketitem_set.count())
+    # print(basket.basketitem_set.count())
 
     basket.total_tesco = start_total_tesco
     basket.total_sainsburys = start_total_sainsburys
@@ -93,4 +85,3 @@ def update_basket(request, slug):
 
     basket.save()
     return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
-    #return HttpResponseRedirect(reverse("basket:basket"))

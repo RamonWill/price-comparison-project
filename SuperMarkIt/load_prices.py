@@ -31,7 +31,7 @@ for url in product_urls:
         c.execute("UPDATE products_product SET price_tesco = ? WHERE url_tesco=?", (tesco_price, url))
 
     else:
-        print("FLAG: Is the following url incorrect {}".format(url))
+        print("FLAG: Is the following url correct? {}".format(url))
 
 
 conn.commit()
