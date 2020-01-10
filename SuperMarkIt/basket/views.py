@@ -74,8 +74,6 @@ def update_basket(request, slug):
         start_total_sainsburys += product_total_sainsburys
         start_total_morrisons += product_total_morrisons
 
-
-
     request.session["items_total"] = basket.basketitem_set.count()
     # print(basket.basketitem_set.count())
 
