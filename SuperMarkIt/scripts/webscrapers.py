@@ -20,8 +20,6 @@ def sainsburys_scrape(url):
     """returns the item price for a sainsburys product"""
     soup = create_soup_page(url)
     try:
-        # product_description = soup.find("div", class_="productTitleDescriptionContainer")
-        # product_name = product_description.find("h1").getText()
         price_units = soup.find("p", class_="pricePerUnit").getText().strip()
         product_price = price_units.partition("/")[0]
         if "p" in product_price:
@@ -41,8 +39,6 @@ def morrisons_scrape(url):
     soup = create_soup_page(url)
     try:
         product_description = soup.find("div", class_="related-search-ribbon-enabled")
-        # product_name_raw = product_description.find(class_="productTitle").getText()
-        # product_name = sort_name(product_name_raw)
 
         try:
             product_price_raw = product_description.find(class_="nowPrice").getText()
@@ -61,8 +57,6 @@ def tesco_scrape(url):
     """returns the item price for a morrisons product"""
     soup = create_soup_page(url)
     try:
-        # product_description = soup.find("div", class_="product-details-tile__title-wrapper")
-        # product_name = product_description.find("h1").getText()
         product_price = soup.find(class_="value").getText()
         return product_price
 
