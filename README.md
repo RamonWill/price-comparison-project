@@ -1,7 +1,7 @@
 # Price Comparison Project (SuperMarkIt)
 A webscraper for the Django Framework that compares the product prices for various UK supermarkets.
 
-<img src="Screenshots/Homepage.png" width="450">
+<img src="Screenshots/Homepage.png" width="700">
 
 # Table of Contents
 - [Introduction](https://github.com/RamonWill/price-comparison-project#Introduction)
@@ -28,6 +28,6 @@ I'd like to thank The Net Ninja who created [this tutorial](https://www.youtube.
 Coming Soon...
 
 # Screenshots
-<img src="Screenshots/categories.png" width="450">
-<img src="Screenshots/products.png" width="450">
+<img src="Screenshots/categories.png" width="500">
+<img src="Screenshots/products.png" width="500">
 <img src="Screenshots/Basket.png" width="500">
