@@ -15,9 +15,9 @@ class Basket(models.Model):
 
 
 class BasketItem(models.Model):
-    basket = models.ForeignKey(Basket, null=True, blank=True, on_delete="CASCADE")
+    basket = models.ForeignKey(Basket, null=True, blank=True, on_delete=models.CASCADE)
     # Basket foriegn key
-    product = models.ForeignKey(Product, on_delete="CASCADE")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     product_total = models.DecimalField(max_digits=6, decimal_places=2, null=True)
     # product total

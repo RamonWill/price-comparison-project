@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('quantity', models.IntegerField(default=1)),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('modified_on', models.DateTimeField(auto_now=True)),
-                ('product', models.ForeignKey(on_delete='CASCADE', to='products.Product')),
+                ('product', models.ForeignKey(on_delete=models.CASCADE, to='products.Product')),
             ],
         ),
         migrations.AddField(

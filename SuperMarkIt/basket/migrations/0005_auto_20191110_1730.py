@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='basketitem',
             name='basket',
-            field=models.ForeignKey(blank=True, null=True, on_delete='CASCADE', to='basket.Basket'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=models.CASCADE, to='basket.Basket'),
         ),
         migrations.AddField(
             model_name='basketitem',
